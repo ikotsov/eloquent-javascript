@@ -1,9 +1,10 @@
 // Solution 1
 function getTriangle(size) {
+    let output = '';
     for (let i = 1; i < size + 1; i++) {
-        let output = getNumOfSharps(i);
-        console.log(output);
+        output += getNumOfSharps(i) + (i < size ? lineBreak() : '');
     }
+    console.log(output);
 }
 
 getTriangle(7);
@@ -30,4 +31,8 @@ function getNumOfSharps(total) {
 
 function getSharp() {
     return '#';
+}
+
+function lineBreak() {
+    return '\n';
 }
