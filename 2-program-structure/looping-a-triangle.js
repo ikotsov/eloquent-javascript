@@ -2,7 +2,8 @@
 function getTriangle(size) {
     let output = '';
     for (let i = 1; i < size + 1; i++) {
-        output += getNumOfSharps(i) + (i < size ? lineBreak() : '');
+        let feedLine = i < size ? lineBreak() : '';
+        output += getNumOfSharps(i) + feedLine;
     }
     console.log(output);
 }
