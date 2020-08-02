@@ -5,22 +5,30 @@ function fizzBuzz() {
 }
 
 function decideWhatToPrint(value) {
-  if (value % 3 === 0 && value % 5 === 0) {
+  if (isDivisibleBy3(value) && isDivisibleBy5(value)) {
     printFizzBuzz();
     return;
   }
 
-  if (value % 3 === 0) {
+  if (isDivisibleBy3(value)) {
     printFizz();
     return;
   }
 
-  if (value % 5 === 0) {
+  if (isDivisibleBy5(value)) {
     printBuzz();
     return;
   }
 
   print(value);
+}
+
+function isDivisibleBy3(value) {
+    return value % 3 === 0;
+}
+
+function isDivisibleBy5(value) {
+    return value % 5 === 0;
 }
 
 function print(value) {
